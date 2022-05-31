@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1228</width>
+    <height>742</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -105,6 +105,9 @@
             </property>
             <item>
              <widget class="QLineEdit" name="server_addr">
+              <property name="text">
+               <string>localhost</string>
+              </property>
               <property name="placeholderText">
                <string>Server Address</string>
               </property>
@@ -112,6 +115,9 @@
             </item>
             <item>
              <widget class="QLineEdit" name="server_port">
+              <property name="text">
+               <string>9394</string>
+              </property>
               <property name="placeholderText">
                <string>Port</string>
               </property>

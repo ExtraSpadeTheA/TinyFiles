@@ -1,16 +1,11 @@
 #include "newwindow.h"
+
+#include "fileinfo.h"
 #include "ui_newwindow.h"
 
-NewWindow::NewWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::NewWindow)
-{
-    ui->setupUi(this);
-    auto cur = ui->files->rowCount();
-    ui->files->setRowCount(cur + 1);
+NewWindow::NewWindow(QWidget *parent)
+    : QMainWindow(parent), ui(new Ui::NewWindow) {
+  ui->setupUi(this);
 }
 
-NewWindow::~NewWindow()
-{
-    delete ui;
-}
+NewWindow::~NewWindow() { delete ui; }

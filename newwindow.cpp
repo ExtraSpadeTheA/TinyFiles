@@ -9,6 +9,18 @@ NewWindow::NewWindow(QWidget *parent) :
     auto cur = ui->files->rowCount();
     ui->files->setRowCount(cur + 1);
 }
+/*void Insert(const FileInfo* file) {
+    int cur_row = ui->files->rowCount();
+    ui->files->setRowCount(cur_row + 1);
+    auto *name = new QTableWidgetItem(file->name);
+    auto *size = new QTableWidgetItem(file->size);
+    auto *type = new QTableWidgetItem(file->type);
+    auto *modified_date = new QTableWidgetItem(file->modified_date);
+    ui->files->setItem(cur_row, 0, name);
+    ui->files->setItem(cur_row, 1, size);
+    ui->files->setItem(cur_row, 2, type);
+    ui->files->setItem(cur_row, 3, modified_date);
+}*/
 
 NewWindow::~NewWindow()
 {

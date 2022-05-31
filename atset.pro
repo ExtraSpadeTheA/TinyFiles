@@ -39,4 +39,5 @@ RESOURCES += \
 
 FORMS += \
     login.ui \
-    newwindow.ui
+    newwindow.ui \
+    upload.ui

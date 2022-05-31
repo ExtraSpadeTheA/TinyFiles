@@ -250,12 +250,12 @@
   </action>
   <action name="actionUpload_Files">
    <property name="text">
-    <string>Upload Files</string>
+    <string>Upload File</string>
    </property>
   </action>
   <action name="actionDownload_Files">
    <property name="text">
-    <string>Download Files</string>
+    <string>Download File</string>
    </property>
   </action>
   <action name="actionCut">

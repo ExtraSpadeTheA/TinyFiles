@@ -14,7 +14,7 @@ class NewWindow : public QMainWindow
 public:
     explicit NewWindow(QWidget *parent = nullptr);
     ~NewWindow();
-
+    void OpenFile();
 private:
     Ui::NewWindow *ui;
 };

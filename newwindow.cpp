@@ -1,26 +1,24 @@
 #include "newwindow.h"
 #include "ui_newwindow.h"
+#include "fileinfo.h"
+#include <QFileDialog>
 
 NewWindow::NewWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::NewWindow)
 {
     ui->setupUi(this);
-    auto cur = ui->files->rowCount();
-    ui->files->setRowCount(cur + 1);
+    FileInfo info(new QString("name"),new  QString("123kb"),new  QString("txt"),new  QString("2022-6-1"));
+    info.AddRow(ui->files);
+    connect(ui->actionUpload_Files,&QAction::triggered,this,&NewWindow::OpenFile);
 }
-/*void Insert(const FileInfo* file) {
-    int cur_row = ui->files->rowCount();
-    ui->files->setRowCount(cur_row + 1);
-    auto *name = new QTableWidgetItem(file->name);
-    auto *size = new QTableWidgetItem(file->size);
-    auto *type = new QTableWidgetItem(file->type);
-    auto *modified_date = new QTableWidgetItem(file->modified_date);
-    ui->files->setItem(cur_row, 0, name);
-    ui->files->setItem(cur_row, 1, size);
-    ui->files->setItem(cur_row, 2, type);
-    ui->files->setItem(cur_row, 3, modified_date);
-}*/
+void NewWindow::OpenFile(){
+    QFileDialog dialog(this);
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setViewMode(QFileDialog::Detail);
+    dialog.exec();
+
+}
 
 NewWindow::~NewWindow()
 {

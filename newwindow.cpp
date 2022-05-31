@@ -1,10 +1,17 @@
 #include "newwindow.h"
+
+#include "fileinfo.h"
 #include "ui_newwindow.h"
 #include "fileinfo.h"
 #include <QFileDialog>
 #include <QFileInfo>
 #include <QDateTime>
 
+<<<<<<< HEAD
+NewWindow::NewWindow(QWidget *parent)
+    : QMainWindow(parent), ui(new Ui::NewWindow) {
+  ui->setupUi(this);
+=======
 NewWindow::NewWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::NewWindow)
@@ -25,9 +32,7 @@ void NewWindow::OpenFile(){
     FileInfo tableinfo(&name,&size,&type,&date);
     tableinfo.AddRow(ui->files);
 
+>>>>>>> f9d7951e319577885fc01d9b0ac91aca28073799
 }
 
-NewWindow::~NewWindow()
-{
-    delete ui;
-}
+NewWindow::~NewWindow() { delete ui; }
